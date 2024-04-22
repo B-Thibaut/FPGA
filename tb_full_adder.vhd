@@ -3,32 +3,41 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 -- DECLARATION D'UNE ENTITE
-entity tb_half_adder is
-end tb_half_adder;
+entity tb_full_adder is
+end tb_full_adder;
 
-architecture tb of tb_half_adder is
-    -- Déclaration des signaux de test
-	signal A, B, S, C: std_logic;
+architecture tb of tb_full_adder is
+	signal A, B, cin, S, C: std_logic;
 
 begin
-    -- Instanciation de l'entité testée, récupérée dans la librairie work
-    -- On appelle cette instance UUT (Unit Under Test)
-	 -- On branche nos ports déclarés sur les ports de notre entité
-	UUT : entity work.half_adder port map (
+
+	UUT : entity work.full_adder port map (
         A => A,
         B => B,
-		  S => S,
-		  C => C
+		  cin => cin,
+		  Sum => S,
+		  Cout => C
 	);
 
-	-- Description des stimuli
-	-- A placer dans des *process*, car ce sont des instructions séquentielles
-	-- (Plusieurs process concurrents peuvent être décrits)
 	stimuli1 : process
 		begin
 
 		A <= '1';
 		B <= '1';
+		cin <='1';--test avec cin à 1
+		wait for 10ns; -- Délai avant le prochain stimulus
+		A <= '1';
+		B <= '0';
+		wait for 10ns; -- Délai avant le prochain stimulus
+		A <= '0';
+		B <= '1';
+		wait for 10ns; -- Délai avant le prochain stimulus
+		A <= '0';
+		B <= '0';
+		wait for 10ns; -- Délai avant le prochain stimulus
+		A <= '1';
+		B <= '1';
+		cin <='0';--test avec cin à 0
 		wait for 10ns; -- Délai avant le prochain stimulus
 		A <= '1';
 		B <= '0';

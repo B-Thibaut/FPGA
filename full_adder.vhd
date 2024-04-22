@@ -7,26 +7,34 @@ entity full_adder is
 	port (
 		A : in std_logic;
 		B : in std_logic;
-		S : out std_logic;
-		C : out std_logic;
-		cin : in std_logic
+		cin : in std_logic;
+		Sum : out std_logic;
+		Cout : out std_logic
 	);
 end full_adder;
 
 -- DESCRIPTION COMPORTEMENTALE DE L'ENTITY
 architecture behavioral of full_adder is
--- (Optionnel) Ecrire ici la déclaration de signaux
--- ex. signal X : std_logic;
+	signal S1, S2, C1, C2: std_logic;
+	
 begin
-    -- Ecrire ici les instructions cocurrentes décrivant le comportement de l'entity
+	 
+	 --creation de deux entité half_adder
 	 HA1 : entity work.half_adder port map(
-		--a definir
+		A => A, 
+		B => B, 
+		S => S1, 
+		C => C1
 	 );
 	 
 	 HA2 : entity work.half_adder port map(
-		--a definir
+		A => s1, 
+		B => Cin, 
+		S => Sum, 
+		C => C2
 	 );
-	 
-	S <= ;
-	C <= ;
+	
+	--creation de la dernière retenu
+	Cout <= C1 or C2;
+	
 end behavioral;

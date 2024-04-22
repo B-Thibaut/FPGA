@@ -26,7 +26,7 @@
 # 
 # vcom -93 -work work {C:/Users/boute/Documents/ecole/FPGA/half_adder.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 11:51:07 on Apr 18,2024
+# Start time: 09:57:55 on Apr 22,2024
 # vcom -reportprogress 300 -93 -work work C:/Users/boute/Documents/ecole/FPGA/half_adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -34,30 +34,47 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity half_adder
 # -- Compiling architecture behavioral of half_adder
-# End time: 11:51:07 on Apr 18,2024, Elapsed time: 0:00:00
+# End time: 09:57:55 on Apr 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-# vcom -93 -work work {C:/Users/boute/Documents/ecole/FPGA/tb_half_adder.vhd}
+# vcom -93 -work work {C:/Users/boute/Documents/ecole/FPGA/full_adder.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 11:51:07 on Apr 18,2024
-# vcom -reportprogress 300 -93 -work work C:/Users/boute/Documents/ecole/FPGA/tb_half_adder.vhd 
+# Start time: 09:57:55 on Apr 22,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/boute/Documents/ecole/FPGA/full_adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity tb_half_adder
-# -- Compiling architecture tb of tb_half_adder
+# -- Compiling entity full_adder
+# -- Compiling architecture behavioral of full_adder
 # -- Loading entity half_adder
-# ** Warning: C:/Users/boute/Documents/ecole/FPGA/tb_half_adder.vhd(32): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/boute/Documents/ecole/FPGA/tb_half_adder.vhd(35): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/boute/Documents/ecole/FPGA/tb_half_adder.vhd(38): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/boute/Documents/ecole/FPGA/tb_half_adder.vhd(41): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 11:51:08 on Apr 18,2024, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 4
+# End time: 09:57:55 on Apr 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs="+acc"  tb_half_adder
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs=""+acc"" tb_half_adder 
-# Start time: 11:51:08 on Apr 18,2024
+# vcom -93 -work work {C:/Users/boute/Documents/ecole/FPGA/tb_full_adder.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 09:57:55 on Apr 22,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/boute/Documents/ecole/FPGA/tb_full_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_full_adder
+# -- Compiling architecture tb of tb_full_adder
+# -- Loading entity full_adder
+# ** Warning: C:/Users/boute/Documents/ecole/FPGA/tb_full_adder.vhd(28): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/boute/Documents/ecole/FPGA/tb_full_adder.vhd(31): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/boute/Documents/ecole/FPGA/tb_full_adder.vhd(34): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/boute/Documents/ecole/FPGA/tb_full_adder.vhd(37): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/boute/Documents/ecole/FPGA/tb_full_adder.vhd(41): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/boute/Documents/ecole/FPGA/tb_full_adder.vhd(44): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/boute/Documents/ecole/FPGA/tb_full_adder.vhd(47): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/boute/Documents/ecole/FPGA/tb_full_adder.vhd(50): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 09:57:55 on Apr 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 8
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs="+acc"  tb_full_adder
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs=""+acc"" tb_full_adder 
+# Start time: 09:57:55 on Apr 22,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
@@ -65,7 +82,8 @@
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.tb_half_adder(tb)#1
+# Loading work.tb_full_adder(tb)#1
+# Loading work.full_adder(behavioral)#1
 # Loading work.half_adder(behavioral)#1
 # 
 # add wave *
@@ -75,5 +93,5 @@
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # Causality operation skipped due to absence of debug database file
-# End time: 11:54:10 on Apr 18,2024, Elapsed time: 0:03:02
+# End time: 09:58:12 on Apr 22,2024, Elapsed time: 0:00:17
 # Errors: 0, Warnings: 1
