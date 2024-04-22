@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TP1_Additionneur
-Mon Apr 22 10:58:39 2024
+Mon Apr 22 11:55:56 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Apr 22 10:58:39 2024          ;
+; Analysis & Synthesis Status     ; Successful - Mon Apr 22 11:55:56 2024          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; TP1_Additionneur                               ;
 ; Top-level Entity Name           ; full_adder_4b                                  ;
@@ -187,8 +187,8 @@ https://fpgasoftware.intel.com/eula.
 ; Combinational ALUT usage for logic          ; 6                         ;
 ;     -- 7 input functions                    ; 0                         ;
 ;     -- 6 input functions                    ; 0                         ;
-;     -- 5 input functions                    ; 4                         ;
-;     -- 4 input functions                    ; 0                         ;
+;     -- 5 input functions                    ; 2                         ;
+;     -- 4 input functions                    ; 2                         ;
 ;     -- <=3 input functions                  ; 2                         ;
 ;                                             ;                           ;
 ; Dedicated logic registers                   ; 0                         ;
@@ -199,8 +199,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                           ;
 ; Maximum fan-out node                        ; full_adder:b2v_inst1|Cout ;
 ; Maximum fan-out                             ; 3                         ;
-; Total fan-out                               ; 45                        ;
-; Average fan-out                             ; 1.32                      ;
+; Total fan-out                               ; 43                        ;
+; Average fan-out                             ; 1.26                      ;
 +---------------------------------------------+---------------------------+
 
 
@@ -245,11 +245,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; arriav_lcell_comb     ; 6                           ;
 ;     normal            ; 6                           ;
 ;         3 data inputs ; 2                           ;
-;         5 data inputs ; 4                           ;
+;         4 data inputs ; 2                           ;
+;         5 data inputs ; 2                           ;
 ; boundary_port         ; 14                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.60                        ;
+; Average LUT depth     ; 1.64                        ;
 +-----------------------+-----------------------------+
 
 
@@ -268,12 +269,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Mon Apr 22 10:58:31 2024
+    Info: Processing started: Mon Apr 22 11:55:48 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TP1_Additionneur -c TP1_Additionneur
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file full_adder_4b.vhd
-    Info (12022): Found design unit 1: full_adder_4b-bdf_type File: C:/Users/boute/Documents/ecole/FPGA/full_adder_4b.vhd Line: 45
+    Info (12022): Found design unit 1: full_adder_4b-bdf_type File: C:/Users/boute/Documents/ecole/FPGA/full_adder_4b.vhd Line: 36
     Info (12023): Found entity 1: full_adder_4b File: C:/Users/boute/Documents/ecole/FPGA/full_adder_4b.vhd Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file baseline_c5gx.v
     Info (12023): Found entity 1: baseline_c5gx File: C:/Users/boute/Documents/ecole/FPGA/baseline_c5gx.v Line: 38
@@ -293,18 +294,20 @@ Info (12021): Found 2 design units, including 1 entities, in source file tb_full
     Info (12022): Found design unit 1: tb_full_adder_4b-tb File: C:/Users/boute/Documents/ecole/FPGA/tb_full_adder_4b.vhd Line: 9
     Info (12023): Found entity 1: tb_full_adder_4b File: C:/Users/boute/Documents/ecole/FPGA/tb_full_adder_4b.vhd Line: 6
 Info (12127): Elaborating entity "full_adder_4b" for the top level hierarchy
-Info (12128): Elaborating entity "full_adder" for hierarchy "full_adder:b2v_inst" File: C:/Users/boute/Documents/ecole/FPGA/full_adder_4b.vhd Line: 65
+Info (12128): Elaborating entity "full_adder" for hierarchy "full_adder:b2v_inst" File: C:/Users/boute/Documents/ecole/FPGA/full_adder_4b.vhd Line: 57
 Info (12128): Elaborating entity "half_adder" for hierarchy "full_adder:b2v_inst|half_adder:HA1" File: C:/Users/boute/Documents/ecole/FPGA/full_adder.vhd Line: 23
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "B[2]" File: C:/Users/boute/Documents/ecole/FPGA/full_adder_4b.vhd Line: 30
 Info (21057): Implemented 20 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 5 output pins
     Info (21061): Implemented 6 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4866 megabytes
-    Info: Processing ended: Mon Apr 22 10:58:39 2024
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4856 megabytes
+    Info: Processing ended: Mon Apr 22 11:55:56 2024
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:08
 

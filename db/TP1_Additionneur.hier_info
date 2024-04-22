@@ -1,18 +1,19 @@
 |full_adder_4b
 Cin => full_adder:b2v_inst.cin
-B1 => full_adder:b2v_inst.B
-A1 => full_adder:b2v_inst.A
-B2 => full_adder:b2v_inst1.B
-A2 => full_adder:b2v_inst1.A
-B3 => full_adder:b2v_inst2.B
-A3 => full_adder:b2v_inst2.A
-B4 => full_adder:b2v_inst3.B
-A4 => full_adder:b2v_inst3.A
-S1 <= full_adder:b2v_inst.Sum
-S2 <= full_adder:b2v_inst1.Sum
-S3 <= full_adder:b2v_inst2.Sum
-S4 <= full_adder:b2v_inst3.Sum
-C <= full_adder:b2v_inst3.Cout
+A[0] => full_adder:b2v_inst.A
+A[1] => full_adder:b2v_inst1.A
+A[2] => full_adder:b2v_inst2.A
+A[3] => full_adder:b2v_inst3.A
+B[0] => full_adder:b2v_inst.B
+B[1] => full_adder:b2v_inst1.B
+B[2] => ~NO_FANOUT~
+B[3] => full_adder:b2v_inst2.B
+B[3] => full_adder:b2v_inst3.B
+C << full_adder:b2v_inst3.Cout
+S[0] << full_adder:b2v_inst.Sum
+S[1] << full_adder:b2v_inst1.Sum
+S[2] << full_adder:b2v_inst2.Sum
+S[3] << full_adder:b2v_inst3.Sum
 
 
 |full_adder_4b|full_adder:b2v_inst

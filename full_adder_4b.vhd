@@ -15,7 +15,7 @@
 
 -- PROGRAM		"Quartus Prime"
 -- VERSION		"Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition"
--- CREATED		"Mon Apr 22 10:37:23 2024"
+-- CREATED		"Mon Apr 22 11:44:42 2024"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -26,19 +26,10 @@ ENTITY full_adder_4b IS
 	PORT
 	(
 		Cin :  IN  STD_LOGIC;
-		B1 :  IN  STD_LOGIC;
-		A1 :  IN  STD_LOGIC;
-		B2 :  IN  STD_LOGIC;
-		A2 :  IN  STD_LOGIC;
-		B3 :  IN  STD_LOGIC;
-		A3 :  IN  STD_LOGIC;
-		B4 :  IN  STD_LOGIC;
-		A4 :  IN  STD_LOGIC;
-		S1 :  OUT  STD_LOGIC;
-		S2 :  OUT  STD_LOGIC;
-		S3 :  OUT  STD_LOGIC;
-		S4 :  OUT  STD_LOGIC;
-		C :  OUT  STD_LOGIC
+		A :  IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
+		B :  IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
+		C :  OUT  STD_LOGIC;
+		S :  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
 END full_adder_4b;
 
@@ -53,6 +44,7 @@ COMPONENT full_adder
 	);
 END COMPONENT;
 
+SIGNAL	S_ALTERA_SYNTHESIZED :  STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC;
 SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC;
 SIGNAL	SYNTHESIZED_WIRE_2 :  STD_LOGIC;
@@ -63,35 +55,36 @@ BEGIN
 
 
 b2v_inst : full_adder
-PORT MAP(A => A1,
-		 B => B1,
+PORT MAP(A => A(0),
+		 B => B(0),
 		 cin => Cin,
-		 Sum => S1,
+		 Sum => S_ALTERA_SYNTHESIZED(0),
 		 Cout => SYNTHESIZED_WIRE_0);
 
 
 b2v_inst1 : full_adder
-PORT MAP(A => A2,
-		 B => B2,
+PORT MAP(A => A(1),
+		 B => B(1),
 		 cin => SYNTHESIZED_WIRE_0,
-		 Sum => S2,
+		 Sum => S_ALTERA_SYNTHESIZED(1),
 		 Cout => SYNTHESIZED_WIRE_1);
 
 
 b2v_inst2 : full_adder
-PORT MAP(A => A3,
-		 B => B3,
+PORT MAP(A => A(2),
+		 B => B(2),
 		 cin => SYNTHESIZED_WIRE_1,
-		 Sum => S3,
+		 Sum => S_ALTERA_SYNTHESIZED(2),
 		 Cout => SYNTHESIZED_WIRE_2);
 
 
 b2v_inst3 : full_adder
-PORT MAP(A => A4,
-		 B => B4,
+PORT MAP(A => A(3),
+		 B => B(3),
 		 cin => SYNTHESIZED_WIRE_2,
-		 Sum => S4,
+		 Sum => S_ALTERA_SYNTHESIZED(3),
 		 Cout => C);
 
+S <= S_ALTERA_SYNTHESIZED;
 
 END bdf_type;
