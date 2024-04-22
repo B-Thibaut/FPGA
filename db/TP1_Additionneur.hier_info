@@ -1,4 +1,21 @@
-|full_adder
+|full_adder_4b
+Cin => full_adder:b2v_inst.cin
+B1 => full_adder:b2v_inst.B
+A1 => full_adder:b2v_inst.A
+B2 => full_adder:b2v_inst1.B
+A2 => full_adder:b2v_inst1.A
+B3 => full_adder:b2v_inst2.B
+A3 => full_adder:b2v_inst2.A
+B4 => full_adder:b2v_inst3.B
+A4 => full_adder:b2v_inst3.A
+S1 <= full_adder:b2v_inst.Sum
+S2 <= full_adder:b2v_inst1.Sum
+S3 <= full_adder:b2v_inst2.Sum
+S4 <= full_adder:b2v_inst3.Sum
+C <= full_adder:b2v_inst3.Cout
+
+
+|full_adder_4b|full_adder:b2v_inst
 A => half_adder:HA1.A
 B => half_adder:HA1.B
 cin => half_adder:HA2.B
@@ -6,7 +23,7 @@ Sum <= half_adder:HA2.S
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|full_adder|half_adder:HA1
+|full_adder_4b|full_adder:b2v_inst|half_adder:HA1
 A => S.IN0
 A => C.IN0
 B => S.IN1
@@ -15,7 +32,85 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 C <= C.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|full_adder|half_adder:HA2
+|full_adder_4b|full_adder:b2v_inst|half_adder:HA2
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4b|full_adder:b2v_inst1
+A => half_adder:HA1.A
+B => half_adder:HA1.B
+cin => half_adder:HA2.B
+Sum <= half_adder:HA2.S
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4b|full_adder:b2v_inst1|half_adder:HA1
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4b|full_adder:b2v_inst1|half_adder:HA2
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4b|full_adder:b2v_inst2
+A => half_adder:HA1.A
+B => half_adder:HA1.B
+cin => half_adder:HA2.B
+Sum <= half_adder:HA2.S
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4b|full_adder:b2v_inst2|half_adder:HA1
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4b|full_adder:b2v_inst2|half_adder:HA2
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4b|full_adder:b2v_inst3
+A => half_adder:HA1.A
+B => half_adder:HA1.B
+cin => half_adder:HA2.B
+Sum <= half_adder:HA2.S
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4b|full_adder:b2v_inst3|half_adder:HA1
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder_4b|full_adder:b2v_inst3|half_adder:HA2
 A => S.IN0
 A => C.IN0
 B => S.IN1
