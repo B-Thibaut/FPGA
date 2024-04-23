@@ -1,5 +1,5 @@
 Flow report for TP1_Additionneur
-Tue Apr 23 09:12:37 2024
+Tue Apr 23 09:26:53 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -38,24 +38,29 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+------------------------------------------------------------------------------+
-; Flow Summary                                                                 ;
-+-----------------------------+------------------------------------------------+
-; Flow Status                 ; Flow Failed - Tue Apr 23 09:12:37 2024         ;
-; Quartus Prime Version       ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
-; Revision Name               ; TP1_Additionneur                               ;
-; Top-level Entity Name       ; top_level                                      ;
-; Family                      ; Cyclone V                                      ;
-; Device                      ; 5CGXFC5C6F27C7                                 ;
-; Timing Models               ; Final                                          ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
-; Total registers             ; N/A until Partition Merge                      ;
-; Total pins                  ; N/A until Partition Merge                      ;
-; Total virtual pins          ; N/A until Partition Merge                      ;
-; Total block memory bits     ; N/A until Partition Merge                      ;
-; Total PLLs                  ; N/A until Partition Merge                      ;
-; Total DLLs                  ; N/A until Partition Merge                      ;
-+-----------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++---------------------------------+------------------------------------------------+
+; Flow Status                     ; Successful - Tue Apr 23 09:26:53 2024          ;
+; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                   ; TP1_Additionneur                               ;
+; Top-level Entity Name           ; top_level                                      ;
+; Family                          ; Cyclone V                                      ;
+; Device                          ; 5CGXFC5C6F27C7                                 ;
+; Timing Models                   ; Final                                          ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 0                                              ;
+; Total pins                      ; 28                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -63,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/23/2024 09:12:32 ;
+; Start date & time ; 04/23/2024 09:26:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; TP1_Additionneur    ;
 +-------------------+---------------------+
@@ -74,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+------------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value    ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+------------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 61573283092773.171385635216526         ; --               ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 61573283092773.171385720718053         ; --               ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --               ; --          ; tb_full_adder                     ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --               ; --          ; tb_full_adder_4b                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --               ; --          ; tb_half_adder                     ;
@@ -118,8 +123,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 457 MB              ; 00:00:13                           ;
-; Total                ; 00:00:06     ; --                      ; --                  ; 00:00:13                           ;
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 477 MB              ; 00:00:14                           ;
+; Total                ; 00:00:06     ; --                      ; --                  ; 00:00:14                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
