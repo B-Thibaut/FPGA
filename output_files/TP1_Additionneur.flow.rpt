@@ -1,5 +1,5 @@
 Flow report for TP1_Additionneur
-Tue Apr 23 11:19:47 2024
+Tue Apr 23 11:36:13 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,14 +41,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Tue Apr 23 11:19:47 2024          ;
+; Flow Status                     ; Successful - Tue Apr 23 11:36:13 2024          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; TP1_Additionneur                               ;
 ; Top-level Entity Name           ; top_level                                      ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CGXFC5C6F27C7                                 ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 17 / 29,080 ( < 1 % )                          ;
+; Logic utilization (in ALMs)     ; 14 / 29,080 ( < 1 % )                          ;
 ; Total registers                 ; 0                                              ;
 ; Total pins                      ; 49 / 364 ( 13 % )                              ;
 ; Total virtual pins              ; 0                                              ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/23/2024 11:19:12 ;
+; Start date & time ; 04/23/2024 11:35:30 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; TP1_Additionneur    ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+------------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value    ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+------------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 61573283092773.171386395227756         ; --               ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 136482432742107.171386493020584        ; --               ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --               ; --          ; tb_full_adder                     ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --               ; --          ; tb_full_adder_4b                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --               ; --          ; tb_half_adder                     ;
@@ -123,26 +123,26 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 474 MB              ; 00:00:14                           ;
-; Fitter               ; 00:00:15     ; 1.0                     ; 1800 MB             ; 00:00:28                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 520 MB              ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.1                     ; 837 MB              ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 672 MB              ; 00:00:01                           ;
-; Total                ; 00:00:30     ; --                      ; --                  ; 00:00:52                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4865 MB             ; 00:00:09                           ;
+; Fitter               ; 00:00:19     ; 1.0                     ; 6367 MB             ; 00:00:19                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 4864 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.1                     ; 5132 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4724 MB             ; 00:00:00                           ;
+; Total                ; 00:00:39     ; --                      ; --                  ; 00:00:35                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                          ;
-+----------------------+------------------+------------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name          ; OS Version ; Processor type ;
-+----------------------+------------------+------------------+------------+----------------+
-; Analysis & Synthesis ; debian-blade     ; Debian GNU/Linux ; 12         ; x86_64         ;
-; Fitter               ; debian-blade     ; Debian GNU/Linux ; 12         ; x86_64         ;
-; Assembler            ; debian-blade     ; Debian GNU/Linux ; 12         ; x86_64         ;
-; Timing Analyzer      ; debian-blade     ; Debian GNU/Linux ; 12         ; x86_64         ;
-; EDA Netlist Writer   ; debian-blade     ; Debian GNU/Linux ; 12         ; x86_64         ;
-+----------------------+------------------+------------------+------------+----------------+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; Thib-Surface     ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; Thib-Surface     ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; Thib-Surface     ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; Thib-Surface     ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Thib-Surface     ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
 
 
 ------------

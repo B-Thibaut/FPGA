@@ -2,36 +2,52 @@ library ieee ;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
--- DESCRIPTION DES ENTREES/SORTIES DE L'ENTITY
 entity transcodeur_7seg is
 	port (
-		BIN : in std_logic_vector(3 downto 0);
-		SEG : out std_logic_vector(6 downto 0)
+	--Declaration entré et sortie (ST pour Sortie Transcodeur)
+		E : in std_logic_vector(3 downto 0);
+		ST : out std_logic_vector(6 downto 0)
 	);
-end transcodeur_7seg;
+end entity;
 
--- DESCRIPTION COMPORTEMENTALE DE L'ENTITY
 architecture behavioral of transcodeur_7seg is
-begin
-    -- Ecrire ici les instructions cocurrentes décrivant le comportement de l'entity
-	 
-	 SEG <= "1000000" when (BIN = "0000") else
-       "1111001" when (BIN = "0001") else
-       "0100100" when (BIN = "0010") else
-       "0110000" when (BIN = "0011") else
-       "0011001" when (BIN = "0100") else
-       "0010010" when (BIN = "0101") else
-       "0000010" when (BIN = "0110") else
-       "1111000" when (BIN = "0111") else
-       "0000000" when (BIN = "1000") else
-       "0001000" when (BIN = "1001") else
-       "0000010" when (BIN = "1010") else
-       "0000001" when (BIN = "1011") else
-       "1000000" when (BIN = "1100") else
-       "1000010" when (BIN = "1101") else
-       "0000110" when (BIN = "1110") else
-       "0001110" when (BIN = "1111")
-       else "0000000";
 
-	
-end behavioral;
+begin
+	process(E)
+	begin
+		 case E is
+			  when "0000" => 
+					ST <= "0000001";  -- 0
+			  when "0001" =>
+					ST <= "1001111";  -- 1
+			  when "0010" =>
+					ST <= "0010010";  -- 2
+			  when "0011" =>
+					ST <= "0000110";  -- 3
+			  when "0100" =>
+					ST <= "1001100";  -- 4
+			  when "0101" =>
+					ST <= "0100100";  -- 5
+			  when "0110" =>
+					ST <= "0100000";  -- 6
+			  when "0111" =>
+					ST <= "0001111";  -- 7
+			  when "1000" =>
+					ST <= "0000000";  -- 8
+			  when "1001" =>
+					ST <= "0000100";  -- 9
+			  when "1010" =>
+					ST <= "0001000";  -- A
+			  when "1011" =>
+					ST <= "1100000";  -- b
+			  when "1100" =>
+					ST <= "0110001";  -- C
+			  when "1101" =>
+					ST <= "1000010";  -- d
+			  when "1110" =>
+					ST <= "0110000";  -- E
+			  when "1111" =>
+					ST <= "0111000";  -- F
+		 end case;
+	 end process;
+end architecture;
