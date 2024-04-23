@@ -17,14 +17,14 @@ begin
 
 	  --Instanciation d'un additionneur  complet 4 bits
 	 FAD1 : entity work.full_adder_4b port map(
-		A => SW(3 downto 0),
+		A => SW(3 downto 0), --- affectation des 
 		B => SW(7 downto 4), 
 		S => LEDG(3 downto 0),
 		Cin => SW(9),
 		C => LEDG(7)
-	 );
+	 ); --- on affecte les différentes entrées de 4 bits 
 	 
-	 LEDR <= SW;
+	 LEDR <= SW; --- On affecte la valeur du switch dans les leds rouge pour les allumer lorsqu'un switch est en position On
 
 	 
 end behavioral;
