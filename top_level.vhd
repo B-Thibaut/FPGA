@@ -24,4 +24,7 @@ begin
 		C => LEDG(7)
 	 );
 	 
+	 LEDR <= SW;
+
+	 
 end behavioral;
