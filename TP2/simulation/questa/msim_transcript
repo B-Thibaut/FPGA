@@ -24,56 +24,79 @@
 # Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/Users/boute/Documents/ecole/FPGA/TP2/flipflop_JK.vhd}
+# vcom -93 -work work {C:/Users/boute/Documents/ecole/FPGA/TP2/flipflop_JKrs.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 10:37:09 on Apr 29,2024
-# vcom -reportprogress 300 -93 -work work C:/Users/boute/Documents/ecole/FPGA/TP2/flipflop_JK.vhd 
+# Start time: 11:39:39 on Apr 29,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/boute/Documents/ecole/FPGA/TP2/flipflop_JKrs.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity flipflop_JK
-# -- Compiling architecture behavioral of flipflop_JK
-# End time: 10:37:09 on Apr 29,2024, Elapsed time: 0:00:00
+# -- Compiling entity flipflop_JKrs
+# -- Compiling architecture behavioral of flipflop_JKrs
+# End time: 11:39:40 on Apr 29,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JK.vhd}
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs="+acc"  tb_flipflop_JKrs
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs=""+acc"" tb_flipflop_JKrs 
+# Start time: 11:39:40 on Apr 29,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Error: (vopt-13130) Failed to find design unit 'tb_flipflop_JKrs'.
+#         Searched libraries:
+#             altera
+#             lpm
+#             sgate
+#             altera_mf
+#             altera_lnsim
+#             cyclonev
+#             cyclonev_hssi
+#             rtl_work
+#             work
+#             work
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./TP2_registres_run_msim_rtl_vhdl.do PAUSED at line 11
+vcom -reportprogress 300 -work work C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JKrs.vhd
 # Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 10:37:10 on Apr 29,2024
-# vcom -reportprogress 300 -93 -work work C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JK.vhd 
+# Start time: 11:48:54 on Apr 29,2024
+# vcom -reportprogress 300 -work work C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JKrs.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity tb_flipflop_JK
-# -- Compiling architecture tb of tb_flipflop_JK
-# -- Loading entity flipflop_JK
-# ** Warning: C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JK.vhd(26): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JK.vhd(37): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JK.vhd(43): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JK.vhd(49): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JK.vhd(55): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 10:37:10 on Apr 29,2024, Elapsed time: 0:00:00
+# -- Compiling entity tb_flipflop_JKrs
+# -- Compiling architecture tb of tb_flipflop_JKrs
+# -- Loading entity flipflop_JKrs
+# ** Warning: C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JKrs.vhd(28): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JKrs.vhd(37): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JKrs.vhd(43): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JKrs.vhd(49): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JKrs.vhd(55): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 11:48:54 on Apr 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 5
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs="+acc"  tb_flipflop_JK
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs=""+acc"" tb_flipflop_JK 
-# Start time: 10:37:10 on Apr 29,2024
+run
+# No Design Loaded!
+vsim work.tb_flipflop_jkrs(tb)
+# vsim work.tb_flipflop_jkrs(tb) 
+# Start time: 11:39:40 on Apr 29,2024
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.tb_flipflop_jk(tb)#1
-# Loading work.flipflop_jk(behavioral)#1
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 100 ns
+# Loading work.tb_flipflop_jkrs(tb)#1
+# Loading work.flipflop_jkrs(behavioral)#1
 # Causality operation skipped due to absence of debug database file
-# End time: 10:42:10 on Apr 29,2024, Elapsed time: 0:05:00
-# Errors: 0, Warnings: 1
+add wave -position end  sim:/tb_flipflop_jkrs/J
+add wave -position end  sim:/tb_flipflop_jkrs/K
+add wave -position end  sim:/tb_flipflop_jkrs/Q
+add wave -position end  sim:/tb_flipflop_jkrs/Qn
+add wave -position end  sim:/tb_flipflop_jkrs/PRE
+add wave -position end  sim:/tb_flipflop_jkrs/CLR
+add wave -position end  sim:/tb_flipflop_jkrs/CLK
+run
+run

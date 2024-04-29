@@ -35,7 +35,7 @@ begin
 
 			
 		end if;
-					Q <= Sis;
+		Q <= Sis;
 		Qn <= not Sis;
 
 	end process;
