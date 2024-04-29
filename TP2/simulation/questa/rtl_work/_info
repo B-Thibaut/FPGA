@@ -1,0 +1,110 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/boute/Documents/ecole/FPGA/TP2/simulation/questa
+T_opt
+!s110 1714379831
+VYnd:a@3gNM]WCba1`f61@1
+04 14 2 work tb_flipflop_jk tb 1
+=1-7c214aebf2da-662f5c37-0-1e74
+R0
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+Eflipflop_jk
+Z2 w1714379611
+Z3 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z4 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 0
+R1
+Z5 8C:/Users/boute/Documents/ecole/FPGA/TP2/flipflop_JK.vhd
+Z6 FC:/Users/boute/Documents/ecole/FPGA/TP2/flipflop_JK.vhd
+l0
+L4 1
+VIfXNP?EBL7`a2ZP:igaPh1
+!s100 o=c0=2HCKLkHSXmZ:Ldff0
+Z7 OL;C;2023.3;77
+31
+Z8 !s110 1714379829
+!i10b 1
+Z9 !s108 1714379829.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/boute/Documents/ecole/FPGA/TP2/flipflop_JK.vhd|
+Z11 !s107 C:/Users/boute/Documents/ecole/FPGA/TP2/flipflop_JK.vhd|
+!i113 0
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R3
+R4
+Z14 DEx4 work 11 flipflop_jk 0 22 IfXNP?EBL7`a2ZP:igaPh1
+!i122 0
+l20
+L18 25
+VVegZJMF`bPmIU?bJE1P?72
+!s100 9Tkm[<Kg@@GokU;mIM9Hl3
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Etb_flipflop_jk
+Z15 w1714379765
+Z16 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
+R3
+R4
+!i122 1
+R1
+Z17 8C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JK.vhd
+Z18 FC:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JK.vhd
+l0
+L6 1
+VKDQJ9NJUV6AC@?RV:F?Q:0
+!s100 nUQziMgmbiG?iiS?>eYV:1
+R7
+31
+Z19 !s110 1714379830
+!i10b 1
+Z20 !s108 1714379830.000000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JK.vhd|
+Z22 !s107 C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JK.vhd|
+!i113 0
+R12
+R13
+Atb
+R14
+R16
+R3
+R4
+DEx4 work 14 tb_flipflop_jk 0 22 KDQJ9NJUV6AC@?RV:F?Q:0
+!i122 1
+l13
+L9 54
+VGibJ28^<;dEE]=[DX1efg0
+!s100 A75QSF>jgl=>kBfGRPh6e1
+R7
+31
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 0
+R12
+R13

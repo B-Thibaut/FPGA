@@ -1,0 +1,79 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do TP2_registres_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work rtl_work 
+# Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/boute/Documents/ecole/FPGA/TP2/flipflop_JK.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 10:37:09 on Apr 29,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/boute/Documents/ecole/FPGA/TP2/flipflop_JK.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flipflop_JK
+# -- Compiling architecture behavioral of flipflop_JK
+# End time: 10:37:09 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JK.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 10:37:10 on Apr 29,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JK.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_flipflop_JK
+# -- Compiling architecture tb of tb_flipflop_JK
+# -- Loading entity flipflop_JK
+# ** Warning: C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JK.vhd(26): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JK.vhd(37): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JK.vhd(43): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JK.vhd(49): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/boute/Documents/ecole/FPGA/TP2/tb_flipflop_JK.vhd(55): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 10:37:10 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 5
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs="+acc"  tb_flipflop_JK
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs=""+acc"" tb_flipflop_JK 
+# Start time: 10:37:10 on Apr 29,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_flipflop_jk(tb)#1
+# Loading work.flipflop_jk(behavioral)#1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100 ns
+# Causality operation skipped due to absence of debug database file
+# End time: 10:42:10 on Apr 29,2024, Elapsed time: 0:05:00
+# Errors: 0, Warnings: 1
