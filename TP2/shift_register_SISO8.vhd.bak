@@ -1,0 +1,46 @@
+library ieee ;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+-- DESCRIPTION DES ENTREES/SORTIES DE L'ENTITY
+entity flipflop_jk_async is
+	port (
+		J : in std_logic; --- entrée J 
+		K : in std_logic;--- entrée K
+		CLK : in std_logic; --- horloge
+		SETn : in std_logic; --- preset J  preset (async actif état bas)
+		RSTn : in std_logic;--- reset (async actif bas) 
+		
+		Q : out std_logic; --- sortie bascule
+		Qn : out std_logic --- sortie complémentée
+	);
+end flipflop_jk_async;
+
+-- DESCRIPTION COMPORTEMENTALE DE L'ENTITY
+architecture behavioral of flipflop_jk_async is
+-- (Optionnel) Ecrire ici la déclaration de signaux
+-- ex. signal X : std_logic;
+		signal Sis : std_logic; --- signal utilisé comme variable tampon 
+begin
+	process(CLK)
+	begin
+		if (CLK'event and CLK = '1') then
+		
+			if (J = '0' and K = '1') then			
+				Sis <= '0';
+			
+			elsif (J = '1' and K = '0') then
+				Sis <= '1';
+			
+			elsif (J = '1' and K = '1') then
+				Sis <= not Sis;
+				
+			end if;
+
+			
+		end if;
+		Q <= Sis;
+		Qn <= not Sis;
+
+	end process;
+end behavioral;
