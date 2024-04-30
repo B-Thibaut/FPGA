@@ -1,0 +1,76 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity ClockDivider_tb is
+end entity ClockDivider_tb;
+
+architecture testbench of ClockDivider_tb is
+
+    signal CLKin_tb : std_logic := '0'; -- Horloge d'entrée
+    signal RST_tb   : std_logic := '1'; -- Signal de reset actif à l'état haut
+    signal N_tb     : std_logic_vector(4 downto 0) := "00000"; -- Entrée N initialisée à zéro
+    signal CLKout_tb: std_logic; -- Horloge de sortie du diviseur
+
+    component ClockDivider is
+        port(
+            CLKin  : in std_logic;
+            RST    : in std_logic;
+            N      : in std_logic_vector(4 downto 0);
+            CLKout : out std_logic
+        );
+    end component;
+
+begin
+
+    UUT: ClockDivider
+    port map(
+        CLKin  => CLKin_tb,
+        RST    => RST_tb,
+        N      => N_tb,
+        CLKout => CLKout_tb
+    );
+
+    -- Processus de génération de l'horloge d'entrée
+    process
+    begin
+        CLKin_tb <= '0';
+        wait for 5 ns; -- Période d'horloge simulée
+        CLKin_tb <= '1';
+        wait for 5 ns; -- Période d'horloge simulée
+    end process;
+
+    -- Processus de simulation de la logique du testbench
+    process
+    begin
+        -- Attente initiale
+        wait for 10 ns;
+        
+        -- Test sans diviseur (N = 0)
+        RST_tb <= '0'; -- Déclenchement de la réinitialisation
+        wait for 5 ns;
+        RST_tb <= '1'; -- Désactivation de la réinitialisation
+        wait for 50 ns; -- Attente pour observer le comportement
+        
+        -- Test avec diviseur (N = 10)
+        N_tb <= "01010"; -- N = 10
+        wait for 10 ns;
+        RST_tb <= '0'; -- Déclenchement de la réinitialisation
+        wait for 5 ns;
+        RST_tb <= '1'; -- Désactivation de la réinitialisation
+        wait for 100 ns; -- Attente pour observer le comportement
+        
+        -- Test avec diviseur (N = 15)
+        N_tb <= "01111"; -- N = 15
+        wait for 10 ns;
+        RST_tb <= '0'; -- Déclenchement de la réinitialisation
+        wait for 5 ns;
+        RST_tb <= '1'; -- Désactivation de la réinitialisation
+        wait for 100 ns; -- Attente pour observer le comportement
+        
+        -- Ajoutez d'autres tests au besoin
+        
+        -- Fin de la simulation
+        wait;
+    end process;
+
+end architecture testbench;

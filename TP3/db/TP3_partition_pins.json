@@ -1,0 +1,137 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "CLKout",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[9]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[10]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[11]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[12]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[13]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[14]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[15]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[16]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[17]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[18]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[19]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[20]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[21]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[22]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[23]",
+					"strict" : false
+				},
+				{
+					"name" : "N[2]",
+					"strict" : false
+				},
+				{
+					"name" : "N[1]",
+					"strict" : false
+				},
+				{
+					"name" : "N[0]",
+					"strict" : false
+				},
+				{
+					"name" : "N[3]",
+					"strict" : false
+				},
+				{
+					"name" : "N[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "RST",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
