@@ -1,62 +1,27 @@
--- Copyright (C) 2023  Intel Corporation. All rights reserved.
--- Your use of Intel Corporation's design tools, logic functions 
--- and other software and tools, and any partner logic 
--- functions, and any output files from any of the foregoing 
--- (including device programming or simulation files), and any 
--- associated documentation or information are expressly subject 
--- to the terms and conditions of the Intel Program License 
--- Subscription Agreement, the Intel Quartus Prime License Agreement,
--- the Intel FPGA IP License Agreement, or other applicable license
--- agreement, including, without limitation, that your use is for
--- the sole purpose of programming logic devices manufactured by
--- Intel and sold by Intel or its authorized distributors.  Please
--- refer to the applicable agreement for further details, at
--- https://fpgasoftware.intel.com/eula.
+library ieee ;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
--- PROGRAM		"Quartus Prime"
--- VERSION		"Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition"
--- CREATED		"Tue Apr 23 12:09:49 2024"
-
-LIBRARY ieee;
-USE ieee.std_logic_1164.all; 
-
-LIBRARY work;
-
-ENTITY flipflop_JK IS 
-	PORT
-	(
-		K :  IN  STD_LOGIC;
-		J :  IN  STD_LOGIC;
-		CLK :  IN  STD_LOGIC;
-		Q :  OUT  STD_LOGIC;
-		Qn :  OUT  STD_LOGIC
+-- DESCRIPTION DES ENTREES/SORTIES DE L'ENTITY
+entity flipflop_jk is
+	port (
+		J : in std_logic;
+		K : in std_logic;
+		CLK : in std_logic;
+		SETn : in std_logic;
+		RSTn : in std_logic;
+		
+		Q : out std_logic;
+		Qn : out std_logic;
 	);
-END flipflop_JK;
+end flipflop_jk;
 
-ARCHITECTURE bdf_type OF flipflop_JK IS 
-
-SIGNAL	SYNTHESIZED_WIRE_6 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_2 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_7 :  STD_LOGIC;
-
-
-BEGIN 
-Q <= SYNTHESIZED_WIRE_7;
-Qn <= SYNTHESIZED_WIRE_6;
-
-
-
-SYNTHESIZED_WIRE_7 <= NOT(SYNTHESIZED_WIRE_6 AND SYNTHESIZED_WIRE_1);
-
-
-SYNTHESIZED_WIRE_6 <= NOT(SYNTHESIZED_WIRE_2 AND SYNTHESIZED_WIRE_7);
-
-
-SYNTHESIZED_WIRE_1 <= NOT(SYNTHESIZED_WIRE_6 AND J AND CLK);
-
-
-SYNTHESIZED_WIRE_2 <= NOT(CLK AND K AND SYNTHESIZED_WIRE_7);
-
-
-END bdf_type;
+-- DESCRIPTION COMPORTEMENTALE DE L'ENTITY
+architecture behavioral of bascule_jk is
+-- (Optionnel) Ecrire ici la déclaration de signaux
+-- ex. signal X : std_logic;
+begin
+    -- Ecrire ici les instructions cocurrentes décrivant le comportement de l'entity
+	S <= (A xor B);
+	C <= (A and B);
+end behavioral;

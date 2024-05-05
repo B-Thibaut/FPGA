@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TP3
-Tue Apr 30 11:26:37 2024
+Tue Apr 30 12:03:33 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue Apr 30 11:26:37 2024              ;
+; Analysis & Synthesis Status ; Failed - Tue Apr 30 12:03:33 2024              ;
 ; Quartus Prime Version       ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name               ; TP3                                            ;
 ; Top-level Entity Name       ; clock_divider                                  ;
@@ -161,7 +161,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Tue Apr 30 11:26:30 2024
+    Info: Processing started: Tue Apr 30 12:03:25 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TP3 -c TP3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -173,11 +173,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file clock_d
 Info (12021): Found 2 design units, including 1 entities, in source file tb_clock_divider.vhd
     Info (12022): Found design unit 1: tb_clock_divider-tb File: C:/Users/boute/Documents/ecole/FPGA/TP3/tb_clock_divider.vhd Line: 9
     Info (12023): Found entity 1: tb_clock_divider File: C:/Users/boute/Documents/ecole/FPGA/TP3/tb_clock_divider.vhd Line: 6
-Error (10476): VHDL error at clock_divider.vhd(29): type of identifier "N" does not agree with its usage as "natural" type File: C:/Users/boute/Documents/ecole/FPGA/TP3/clock_divider.vhd Line: 29
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
+Error (10500): VHDL syntax error at chenillard.vhd(7) near text "end";  expecting an identifier ("end" is a reserved keyword), or "constant", or "file", or "signal", or "variable" File: C:/Users/boute/Documents/ecole/FPGA/TP3/chenillard.vhd Line: 7
+Error (10500): VHDL syntax error at chenillard.vhd(11) near text "begin";  expecting an identifier ("begin" is a reserved keyword), or "constant", or "file", or "signal", or "variable" File: C:/Users/boute/Documents/ecole/FPGA/TP3/chenillard.vhd Line: 11
+Info (12021): Found 0 design units, including 0 entities, in source file chenillard.vhd
+Info (12021): Found 0 design units, including 0 entities, in source file tb_chenillard.vhd
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
     Error: Peak virtual memory: 4845 megabytes
-    Error: Processing ended: Tue Apr 30 11:26:37 2024
-    Error: Elapsed time: 00:00:07
+    Error: Processing ended: Tue Apr 30 12:03:33 2024
+    Error: Elapsed time: 00:00:08
     Error: Total CPU time (on all processors): 00:00:07
 
 
